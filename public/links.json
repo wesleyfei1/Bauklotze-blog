@@ -1,0 +1,22 @@
+{
+  "friends": [
+    {
+      "id_name": "cf-links",
+      "desc": "Common links included in circle friends",
+      "link_list": [
+        {
+          "name": "xinchengo的博客",
+          "intro": "Bauklotze评价: USTC2400大佬, 对ai和电脑有独特见解", 
+          "link": "https://xinchengo.github.io/blog-zh/",
+          "avatar": "https://avatars.githubusercontent.com/u/11454169?v=4"
+        },
+        { 
+          "name": "Mirawind's Blog",
+          "intro": "Wish to be a firefly in the night...",
+          "link": "https://www.mirawind.top/",
+          "avatar": "https://avatars.githubusercontent.com/u/53815918?v=4"
+        }
+      ]
+    }
+  ]
+}

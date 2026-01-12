@@ -1,0 +1,142 @@
+---
+import { Image } from 'astro:assets'
+
+import PageLayout from '@/layouts/CommonPage.astro'
+import ProjectSection from '@/components/projects/ProjectSection.astro'
+import Sponsors from '@/components/projects/Sponsors.astro'
+import alipay from '@/assets/alipay-qrcode.jpg'
+import wechat from '@/assets/wechat-qrcode.jpg'
+import config from '@/site-config'
+
+import { Button, Icon } from '@/components/user'
+import type { iconsType } from '@/types'
+
+const headings = [
+  { depth: 2, slug: 'projects', text: 'Projects' },
+  { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
+]
+import Collapse from '@/components/user/Collapse.astro'
+---
+
+<PageLayout title='Projects' {headings} info={{ slug: '/projects', hideComment: true }}>
+  <div class='mb-8 flex items-center justify-between'>
+    <p class='text-muted-foreground'>如果你觉得我的项目还不错，可以赞助我/在知乎上帮我点点赞，让我有动力继续做下去~</p>
+    <Button 
+  title='Checkout sponsorship' 
+  class='flex items-center gap-2 border border-primary/20 bg-primary/5 hover:bg-primary/10 px-5 py-2 rounded-xl transition-colors' 
+  href='#sponsorship'
+>
+  <Icon class='size-5 text-amber-500' name='receive-money' slot='before' />
+</Button>
+  </div>
+
+  <h2 id='projects' class='mb-8 text-2xl font-semibold'>Projects</h2>
+  <ProjectSection
+    project={[
+      {
+        name: 'Bauklotze Blog',
+        description: '基于Pure的Astro个人博客，记录我的科研/学习生活',
+        image: 'lumina.webp',
+        links: [
+          { type: 'github', href: 'https://github.com/wesleyfei1/Bauklotze-blog' },
+          { type: 'site', href: 'https://bauklotze.vercel.app/' }
+        ]
+      }
+    ]}
+  />
+  <Collapse title='self-study repo'>
+    <ProjectSection
+      project={[
+        {
+          name: 'Stanford-CS224n',
+          description: 'Manning的自然语言处理深度学习课程笔记和代码',
+          image: 'lumina.webp',
+          links: [
+            { type: 'github', href: 'https://github.com/wesleyfei1/Stanford-CS224N-WesleyFei' },
+            {
+              type: 'release',
+              href: 'https://www.zhihu.com/column/c_1964687107424511458'
+            },
+          ]
+        },
+        {
+          name: 'Stanford-CS230',
+          description: 'Andrew Ng的深度度学习课程CS230的学习笔记和代码',
+          image: 'lumina.webp',
+          links: [
+            { type: 'github', href: 'https://github.com/wesleyfei1/Stanford-CS230-WesleyFei' },
+            {
+              type: 'release',
+              href: 'https://www.zhihu.com/column/c_1964687107424511458'
+            },
+          ]
+        },
+        {
+          name: 'Stanford-CS229',
+          description: 'Andrew Ng的机器学习课程CS229的学习笔记和代码',
+          image: 'lumina.webp',
+          links: [
+            { type: 'github', href: 'https://github.com/wesleyfei1/Stanford-CS229-WesleyFei' },
+            {
+              type: 'release',
+              href: 'https://www.zhihu.com/column/c_1964687107424511458'
+            },
+          ]
+        },
+      ]}
+    />
+  </Collapse>
+
+  <!-- sponsorship -->
+  <h2 id='sponsorship'>Sponsorship</h2>
+  <p>请在赞助后留言或主动联系我，可以被放入赞助人列表，祝你开心。</p>
+  <div class='flex flex-col justify-center gap-4 sm:flex-row'>
+    {
+      [
+        { name: 'WeChat', icon: 'wechat-pay', image: wechat },
+        { name: 'Alipay', icon: 'alipay', image: alipay }
+      ].map((item) => (
+        <div class='group relative justify-center overflow-hidden rounded-xl border bg-white'>
+          <div class='absolute bottom-0 end-0 start-0 top-0 flex items-center justify-center transition-opacity group-hover:opacity-0'>
+            <Icon class='size-20' name={item.icon as iconsType} />
+          </div>
+          <Image
+            class='mx-auto my-0 max-w-60 opacity-30 blur-sm transition-opacity group-hover:opacity-100 group-hover:blur-none'
+            src={item.image}
+            alt={item.name}
+            loading='lazy'
+          />
+        </div>
+      ))
+    }
+  </div>
+  <p>感谢这些人的支持：</p>
+  <Sponsors
+    sponsors={[
+      { name: 'Lvx', amount: '88', date: '2025-10-25' }
+      // { name: '赞助者 2', amount: '50.0', date: '202X-XX-XX' }
+    ]}
+  />
+</PageLayout>
+
+<script
+  is:inline
+  type='module'
+  data-astro-rerun
+  define:vars={{ npmCDN: config.npmCDN, walineServer: config.integ.waline.server }}
+>
+  const normalizePath = (path) => {
+    if (path === '/') return path
+    return path.endsWith('/') ? path.slice(0, -1) : path
+  }
+
+  const loadPageviewCount = async () => {
+    const pageview = await import(`${npmCDN}/@waline/client@v3/dist/pageview.js`)
+    pageview.pageviewCount({
+      serverURL: walineServer,
+      path: normalizePath(window.location.pathname)
+    })
+  }
+
+  await loadPageviewCount()
+</script>

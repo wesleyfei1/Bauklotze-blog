@@ -1,0 +1,164 @@
+---
+import PageLayout from '@/layouts/CommonPage.astro'
+import AlgorithmShowcase from '@/components/about/AlgorithmShowcase.astro'
+import ToolSection from '@/components/about/ToolSection.astro'
+import Substats from '@/components/about/Substats.astro'
+import Collapse from '@/components/user/Collapse.astro'
+import { Comment } from '@/components/advanced'
+import { Button, DistributionSection, Spoiler } from '@/components/user'
+import Timeline from '@/components/user/Timeline.astro'
+
+const headings = [
+  { depth: 2, slug: 'distribution', text: 'Distribution' },
+  { depth: 2, slug: 'tools', text: 'Tools' },
+  { depth: 2, slug: 'copyright', text: 'Copyright' },
+  { depth: 2, slug: 'theme', text: 'Theme' }
+]
+
+const distributions = [
+  {
+    title: '镜像站 1',
+    url: 'example.com',
+    platform: 'Vercel'
+  },
+  {
+    title: '镜像站 2',
+    url: 'blog.example.com',
+    platform: 'Vultr'
+  }
+]
+---
+
+<PageLayout title='About' {headings} info='/about'>
+  <p>学生/<Spoiler>可爱苕皮</Spoiler></p>
+  <p>
+    一名来自中国科学技术大学(USTC)少年班学院(SGY)，人工智能专业，24级学生。目前正在<a href="https://alphalab-ustc.github.io/index.html" target="_blank" rel="noopener">Alpha-Lab</a>进行生成式推荐的研究，热衷于探索各种ai算法背后的深刻的哲学原理。
+  </p>
+  <p>
+    Motto: 墙壁的那边，有大海。
+  </p>
+  <Button title='Sponsor Me' class='w-fit' href='/projects#sponsorship' variant='ahead' />
+  {/* general-talk */}
+  <h2 id='hobbies'>Hobbies</h2>
+  <ul>
+    <li>
+    <strong> AI philosopher：</strong> 
+    热衷于研究 AI 思想与底层逻辑，尤其是llm研究背后的数学物理思想。喜欢自学各种各样的课程。目前正致力于生成式推荐系统的研究。
+  </li>
+  <li>
+    <strong>二次元观察员：</strong> 
+    <a href="https://bgm.tv/user/1197615" target="_blank">追番</a>是生命之光。
+    本命番包括《进击的巨人》(献出心脏!)、《JoJo的奇妙冒险》、《电锯人》、《海贼王》和《死亡笔记》。当然，每年的四月都会重温一遍《四月是你的谎言》。
+  </li>
+  <li>
+    <strong>Music：</strong> 
+    热爱音乐,尤其是各种动漫音乐的钢琴改变(Animenzzz!!!), 并将音乐作为我生活的motivation之一。
+  </li>
+  <li>
+    <strong>篮球 & NBA：</strong> 
+    又菜又爱玩，NBA 忠实粉丝，主队 <strong>LA Clippers</strong>，毫无保留地支持 <strong>James Harden</strong> (MVP!)。欢迎大家找我约球！！
+  </li>
+  </ul>
+  {/* gossips */}
+  <Collapse title='Something interesting'>
+<Collapse title='Why "Philosopher in AI"?'>
+  我认为尽管目前LLM是黑箱结构，但是通过研究各种问题，通过和数学/物理知识的结合，我们可以逐步揭开LLM的神秘面纱，从而理解其底层逻辑和运行机制。
+  与此同时我们也可以反过来使用数学/物理知识去思考下一代ai的结构，比如diff4policy，mamba等。
+</Collapse>
+<Collapse title='about basketball'>
+  <p>1.又菜又爱玩，喜欢哈登但是打法像克莱，甚至运球一坨。</p>
+  <p>2.NBA&&Harden: 高中时有个同学每天在我身边说100+ Harden MVP,然后我就喜欢上NBA了</p>
+  <p>3.我讨厌乐邦詹士！！讨厌常务副GOAT!!!</p>
+</Collapse>
+  </Collapse>
+  <!-- <h2 id='distribution'>网页分发<a class='anchor' href='#distribution'>#</a></h2>
+  <p>
+    为了提供更好的访问体验和可靠性，本站在多个平台进行了部署，您可以选择合适的镜像站点进行访问：
+  </p>
+  <DistributionSection class='mb-8 mt-6' {distributions} />
+  <p>如果您遇到访问问题，建议尝试其他镜像站点。所有站点内容保持同步更新。</p> -->
+  <h2 id='tools'>工具<a class='anchor' href='#tools'>#</a></h2>
+  <ToolSection
+    class='mb-5'
+    title='Productivity'
+    tools={[
+      {
+        name: 'VS Code',
+        description: 'Code Editor',
+        href: 'https://code.visualstudio.com/',
+        icon: import('@/assets/tools/vscode.svg?raw')
+      },
+      {
+        name: 'Typora',
+        description: 'Ideas recorder ',
+        href: 'https://typora.io/',
+        icon: import('@/assets/tools/typora.svg?raw')
+      },
+      {
+        name: 'Chrome',
+        description: 'Web Browser',
+        href: 'https://www.google.com/chrome/',
+        icon: import('@/assets/tools/chrome.svg?raw')
+      },
+      {
+        name: 'Gemini',
+        description: 'AI Assistant',
+        href: 'https://gemini.google.com/',
+        icon: import('@/assets/tools/gemini.svg?raw')
+      }
+    ]}
+  />
+  <h2 id='social-networks'>Social Networks</h2>
+  <p>
+    Here are some of my social network profiles where you can follow me:
+  </p>
+  <Substats
+    stats={[
+      {
+        platform: 'GitHub',
+        icon: 'github',
+        link: 'https://github.com/wesleyfei1',
+        text: 'followers',
+        api: 'github/wesleyfei1'
+      },
+      {
+        platform: 'Zhihu',
+        icon: 'zhihu',
+        color: '#0084ff',
+        link: 'https://www.zhihu.com/people/2400fwh',
+        text: '400+ followers',
+      },
+    ]}
+  ></Substats>
+  {/* about-blog */}
+  <h2 id='about-blog'>About Blog</h2>
+  <p>Website history:</p>
+  <Timeline
+  events={[
+  {
+    date: '2026-01-12',
+    content:
+      '将theme从pure全面更换成Astro-Axi，进一步优化博客的性能与用户体验。'
+  },
+    {
+    date: '2026-01-11',
+    content:
+      '在 <a href="https://github.com/MiraWind" target="_blank">MiraWind</a> 的影响下，结合 <a href="https://axi404.top" target="_blank">Axi404</a> 的启发，基于 <a href="https://github.com/cworld1/astro-theme-pure" target="_blank">Astro Theme Pure</a> 彻底重构博客，开启 AI 科研与生活记录新篇章。'
+  },
+  {
+    date: '2024-11',
+    content:
+      '初次尝试技术实践，使用 <strong>Jekyll</strong> 框架将个人网站部署于 <a href="https://wesleyfei1.github.io/" target="_blank">GitHub Pages</a>。'
+  },
+  {
+    date: '2024-08',
+    content: '萌生建立个人网站的想法，渴望拥有一片属于自己的数字空间来记录学习沉淀与生活点滴。'
+  }
+  ]}
+/>
+  <strong>特别鸣谢 <a href="https://axi404.top" target="_blank">Axi404</a> 提供的灵感以及主题</strong>
+
+  <!-- <AlgorithmShowcase class='my-8' /> -->
+
+  <Comment slot='bottom' />
+</PageLayout>
