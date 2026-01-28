@@ -12,10 +12,10 @@ export const prerender = true
 
 export const getStaticPaths = (async ({ paginate }) => {
   const categoryMap: Record<string, string> = {
-    'tech': 'Technical',
+    'tech': 'Learning',
     'daily': 'Daily Life',
     'research': 'Research',
-    'journal': 'Month Journal'
+    'journal': 'Study Journal'
   }
   
   const categoryOrder = ['research', 'tech', 'daily', 'journal']
