@@ -14,10 +14,6 @@ heroImage:
   color: '#ca6980'
 ---
 
-![Background](images/background.jpg)
-
-
-
 之前我们对于层与层的连接中基本都是用**全连接层** ，但这样对于一张正常的图片至少为  $64\times64\times3=12288$  个参数，对于第一层的全连接层就至少有1M的参数，因此我们基于图片本身的特点，设计出一种新的网络结构——**CNN** (Convolutional Neural Network).
 
 

@@ -13,10 +13,6 @@ heroImage:
   color: '#dcb09d'
 ---
 
-![Background](images/background.jpg)
-
-
-
 由于USTC对于少年班学院学生的特殊政策，我直到大一下的4月份才确定之后走ai方向，忙于数理基础和各种ddl的我，直到7月份才有学了半本的dive intodeep learning，且Python等编程基础比较薄弱。
 
 

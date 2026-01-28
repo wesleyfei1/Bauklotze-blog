@@ -12,10 +12,6 @@ heroImage:
   color: '#d2b992'
 ---
 
-![Background](images/background.jpg)
-
-
-
 LC-3是冯诺依曼机的一个简单样例，也是考试的重点，下面来整理一下LC-3的基本结构，指令以及有趣的例题
 
 ## LC-3基本结构

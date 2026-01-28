@@ -12,11 +12,6 @@ heroImage:
   src: 'images/background.jpg'
   color: '#ca6980'
 ---
-
-![Background](images/background.jpg)
-
-
-
 之前我们学习了若干种模型，我们可以去训练这些模型，但是在得出一个结果之后，我们该如何分析这些结果，并尝试进行优化呢？
 
 在Lecture9,10,13中，我们就学习了解决这个问题的基本方法，Andrew Ng介绍了数据处理与分配的方法，并介绍了若干种分析优化模型的观点：

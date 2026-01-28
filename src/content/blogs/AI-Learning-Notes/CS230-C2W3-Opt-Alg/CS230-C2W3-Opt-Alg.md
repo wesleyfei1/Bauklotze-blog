@@ -13,10 +13,6 @@ heroImage:
   color: '#ca6980'
 ---
 
-![Background](images/background.jpg)
-
-
-
 为了学习更深的神经网络，我们需要更多的数据以及更深的神经网络，而把训练数据一次性输入大**量占用内存** ，显然不是特别好的解决方案。因此我们接下来将会介绍**mini-batch training**,同时我们会介绍如何** 更加快速的训练**，即选择更加高效的优化算法。
 
 ## mini-batch training

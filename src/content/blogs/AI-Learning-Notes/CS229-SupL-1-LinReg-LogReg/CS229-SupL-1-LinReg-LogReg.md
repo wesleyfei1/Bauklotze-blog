@@ -13,10 +13,6 @@ heroImage:
   color: '#ca6980'
 ---
 
-![Background](images/background.jpg)
-
-
-
 听了后面的Lecture 5, 正好从更高的视角来观察之前学过的这些模型与算法。
 
 

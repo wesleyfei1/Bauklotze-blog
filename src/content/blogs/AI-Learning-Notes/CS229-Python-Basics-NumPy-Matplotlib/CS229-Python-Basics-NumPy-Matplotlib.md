@@ -13,10 +13,6 @@ heroImage:
   color: '#eacd8e'
 ---
 
-![Background](images/background.jpg)
-
-
-
 经过长达总时长24h的努力，终于成功的把CS229 Problem Set 1中5道题目给做完了，完成这些题目也是让我略微熟悉了一下python,文件操作和ML中常见的库(numpy,matplotlib)。首先我先来总结一下在我做这些题目中感觉比较常见（容易混淆的）Python及库函数的用法。
 
 

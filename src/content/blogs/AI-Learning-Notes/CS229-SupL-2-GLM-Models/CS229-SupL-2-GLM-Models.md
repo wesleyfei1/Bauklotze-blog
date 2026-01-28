@@ -13,10 +13,6 @@ heroImage:
   color: '#719af1'
 ---
 
-![Background](images/background.jpg)
-
-
-
 花了两天的时间把常见的linear regression, binary regression, k-classes regression几个常见的模型学习了一下，Andrew Ng将每一个模型的来龙去脉，包括hypothesis, loss function原因以及不同模型之间的关系进行了详细的说明，并且全部归入了GLM模型中，从而推导了k-classes classification（softmax) 的细节，真的让我大彻大悟。
 
 

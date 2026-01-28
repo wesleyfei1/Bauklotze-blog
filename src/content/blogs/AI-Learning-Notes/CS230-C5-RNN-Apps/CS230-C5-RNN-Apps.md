@@ -13,9 +13,6 @@ heroImage:
   color: '#ca6980'
 ---
 
-![Background](images/background.jpg)
-
-
 
 CS230的最后一块内容是介绍关于RNN的，个人感觉Andrew Ng在RNN网络的介绍上非常详细，但是对于NLP&LLM部分就显得不太行了，本文中我们将会就RNN网络的来龙去脉进行介绍，对于RNN的应用我们将会留到cs224n中进行介绍。
 

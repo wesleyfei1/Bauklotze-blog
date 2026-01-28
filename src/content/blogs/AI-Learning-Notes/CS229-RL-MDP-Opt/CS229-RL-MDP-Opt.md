@@ -13,10 +13,6 @@ heroImage:
   color: '#ca6980'
 ---
 
-![Background](images/background.jpg)
-
-
-
 CS229最后介绍了强化学习的内容，与之前的规定了优化的方向以及最后的目标不同，强化学习是通过**对机器的行为设定奖励并通过实验自行学习到最优的解决方案** 的一种学习手段，接下来我们将会介绍最为基本的Markov Decision Process以及其常见的改进手段。
 
 ## Basic MDP

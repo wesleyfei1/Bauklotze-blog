@@ -12,10 +12,6 @@ heroImage:
   color: '#ca6980'
 ---
 
-![Background](images/background.jpg)
-
-
-
 conda是一款用于管理python环境与包的管理器，尤其是对于不同项目需要使用不同的python环境，conda就可以方便的进行隔离。
 
 ![](images/image_01.jpg)

@@ -12,10 +12,6 @@ heroImage:
   color: '#dcb09d'
 ---
 
-![Background](images/background.jpg)
-
-
-
 这个暑假2个月基本上都呆在了学校里面，每天可以说是摆摆学学，学习计划中的内容基本完成了，但是也有一些做的不好的地方
 
 ## 学习总结

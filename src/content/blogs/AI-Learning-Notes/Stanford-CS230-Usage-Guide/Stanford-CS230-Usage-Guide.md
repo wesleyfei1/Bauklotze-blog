@@ -12,10 +12,6 @@ heroImage:
   color: '#ca6980'
 ---
 
-![Background](images/background.jpg)
-
-
-
 CS230虽然说是讲关于Deep Learning的，但是这门课程包括了很多的课后资源（coursera上的视频以及作业），上课更多的是关于大局观上的介绍。接下来我就个人的理解来整理一下学习Deep Learning的资源以及食用方法。
 
 ## 主要资源

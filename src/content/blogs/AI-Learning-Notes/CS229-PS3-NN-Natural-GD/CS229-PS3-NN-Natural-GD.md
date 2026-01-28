@@ -13,10 +13,6 @@ heroImage:
   color: '#ca6980'
 ---
 
-![Background](images/background.jpg)
-
-
-
 problem set3总体是非常有趣的，包括对于神经网络的深层次理解，对于梯度下降在概率流形上的改进——自然梯度下降，以及一些实际的有趣的案例
 
 对于作业以及作业答案如下

@@ -13,7 +13,6 @@ heroImage:
 #   color: '#D58388'
 ---
 
-![Background](images/background.jpg)
 
 
 

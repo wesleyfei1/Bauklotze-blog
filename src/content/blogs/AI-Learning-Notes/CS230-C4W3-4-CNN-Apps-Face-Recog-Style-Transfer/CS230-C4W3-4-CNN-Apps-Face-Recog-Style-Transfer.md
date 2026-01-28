@@ -14,10 +14,6 @@ heroImage:
   color: '#ca6980'
 ---
 
-![Background](images/background.jpg)
-
-
-
 之前我们了解了CNN设计的常见思路，而接下来我们将会介绍人脸识别，图像识别等方面一些特别的设计结构，并由此对CNN中的**卷积** 有更深刻的理解。
 
 ## 人脸识别

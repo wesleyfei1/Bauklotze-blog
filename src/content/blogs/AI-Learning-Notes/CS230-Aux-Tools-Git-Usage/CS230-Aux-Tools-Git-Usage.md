@@ -12,10 +12,6 @@ heroImage:
   color: '#ca6980'
 ---
 
-![Background](images/background.jpg)
-
-
-
 今天在更新 [Github-WesleyFei1](https://link.zhihu.com/?target=https%3A//wesleyfei1.github.io) 以及CS230的作业仓库的时候，发现自己原本一直使用的GitHub桌面端突然崩掉了，而且桌面端对于版本的控制，同步仓库非常的不方便，于是我学习了一款新的版本控制设备**git** 的具体使用
 
 ## Git安装

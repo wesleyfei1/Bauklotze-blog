@@ -13,10 +13,6 @@ heroImage:
   color: '#87e5fa'
 ---
 
-![Background](images/background.jpg)
-
-
-
 对于cs230主干的第一部分C1而言，coursera的视频课和cs229的神经网络部分重叠度比较高，但是通过programming assignment的实现对于使用python实现NN以及反向传播有了更加深刻的理解。接下来我们来具体的介绍以下
 
 ## 深度神经网络的代码实现

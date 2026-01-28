@@ -13,10 +13,6 @@ heroImage:
   color: '#ca6980'
 ---
 
-![Background](images/background.jpg)
-
-
-
 拖了2天了，原本想要看完Lecture 6就写这篇文章的，但是Andrew Ng.讲的实在是太好了，搞得我非常想要把SVM给全部学完，结果是看到了Lecture 8, 才发现对于**Generative Learning Algorithm** (生成式学习算法)还没有整理，今天来给大家介绍以下对于一个dataset可以直接使用的**quick and rough** 的算法：GDA和Naive Bayes Method
 
 
