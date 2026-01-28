@@ -22,6 +22,8 @@ heroImage:
 
 首先我们来介绍一类全新的模型。
 
+## 生成式学习算法
+
 ### Generative Learning Algorithm:
 
 对于我们之前学习的，无论是逻辑回归（Logistic Regression），还是线性回归(Linear Regression)，我们对于求解参数  $\theta $  的方式都是使用对于在满足当前数据集和参数  $\theta,x$  下的最大似然估计  $MLE$  。  $MLE=log(L(\theta))=\Sigma_{i=1}^m log(p(y^i|x^i,\theta))$  （conditional likelihood)。**直觉上看** 就是通过feature去求解在那个class中。这个是之前的中心思想

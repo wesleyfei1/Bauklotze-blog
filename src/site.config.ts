@@ -1,5 +1,5 @@
 import type { CardListData, Config, IntegrationUserConfig, ThemeUserConfig } from './types'
-import { titanQuotes } from '/public/quotes.ts'
+import { titanQuotes } from '../public/quotes'
 export const theme: ThemeUserConfig = {
   // === Basic configuration ===
   /** Title for your website. Will be used in metadata and as browser tab title. */

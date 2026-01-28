@@ -30,7 +30,10 @@ export function generateToc(headings: readonly MarkdownHeading[]) {
     if (heading.depth === 2) {
       toc.push(heading)
     } else {
-      const lastItemInToc = toc[toc.length - 1]!
+      const lastItemInToc = toc[toc.length - 1]
+      if (!lastItemInToc) {
+        throw new Error(`Orphan heading found: ${heading.text}. Please add an h2 heading before deeper headings.`)
+      }
       if (heading.depth < lastItemInToc.depth) {
         throw new Error(`Orphan heading found: ${heading.text}.`)
       }

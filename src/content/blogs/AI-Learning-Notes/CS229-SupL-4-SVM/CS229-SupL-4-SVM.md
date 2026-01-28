@@ -30,6 +30,8 @@ heroImage:
 
 5.SMO method to train it.(how to choose the parameters, how to adjust the params)
 
+## SVM核心概念
+
 ### 中心思想
 
 问题：给定一组数据集  $\{x^i,y^i\},i\in[1,m],y\in\{-1,1\}$  ，现在需要寻找数据集之间的非线性拟合边界并且对于test\_set进行预测。(y的值-1，1是为了后序方便）
