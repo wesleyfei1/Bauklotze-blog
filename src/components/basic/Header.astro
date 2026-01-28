@@ -11,18 +11,17 @@ const allCategories = getUniqueCategories(allCollections)
 
 // Define category display names and filter allowed categories
 const categoryMap: Record<string, string> = {
-  'tech': 'Technical',
+  'tech': 'Learning',
   'daily': 'Daily Life',
   'research': 'Research',
-  'journal': 'Month Journal'
+  'journal': 'Study Journal'
 }
 
 // Define custom order (Research first)
 const categoryOrder = ['research', 'tech', 'daily', 'journal']
 
-// Filter and map categories with custom order
+// Map categories with custom order (show all categories even if empty)
 const categories = categoryOrder
-  .filter(cat => allCategories.includes(cat))
   .map(cat => ({ slug: cat, name: categoryMap[cat] }))
 
 // 处理 trailingSlash: 'never' 配置的辅助函数
@@ -59,7 +58,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
       <div class='flex flex-col items-center justify-center md:flex-row'>
         {
           (config.header?.menu || []).map((item: any) => {
-            const isBlogMenu = item.link === '/blog/research' || item.title === 'Blog'
+            const isBlogMenu = item.link === '/blog/tech' || item.title === 'Blog'
             if (isBlogMenu && categories.length > 0) {
               return (
                 <div class='menu-item-with-dropdown relative w-full md:w-fit' style='position: relative;'>

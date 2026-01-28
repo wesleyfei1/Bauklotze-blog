@@ -3,7 +3,7 @@ title: '工作流反思(1）'
 publishDate: 2026-01-11
 updatedDate: 2026-01-11
 description: '工作流反思(1）'
-category: tech
+category: 'daily'
 tags:
   - reflection
 language: zh

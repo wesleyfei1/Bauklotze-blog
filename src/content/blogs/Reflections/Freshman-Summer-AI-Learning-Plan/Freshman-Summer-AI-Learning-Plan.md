@@ -3,7 +3,7 @@ title: '大一暑假ai学习计划'
 publishDate: 2026-01-11
 updatedDate: 2026-01-11
 description: '大一暑假ai学习计划'
-category: tech
+category: journal
 tags:
   - learning-plan
   - reflection

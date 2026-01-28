@@ -3,7 +3,7 @@ title: '大一暑假ai学习总结'
 publishDate: 2026-01-11
 updatedDate: 2026-01-11
 description: '大一暑假ai学习总结'
-category: tech
+category: journal
 tags:
   - reflection
 language: zh
