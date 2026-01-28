@@ -1,14 +1,10 @@
----
-title: "Axi Theme 使用文档"
-title_en: "Axi Theme Documentation"
-description: "主题配置、部署与写作指南（中英双语）。"
-description_en: "Bilingual docs for setup, deployment, and writing."
-heroImage: {src : "https://picr2.axi404.top/1767811093734_image.webp", color: '#4F504C'}
+﻿---
+title: "学期记录"
+title_en: "Wesley's Semester record"
+description: "WesleyFei's的学期记录"
+description_en: "Wesley's Semester record"
+heroImage: {src : "https://bauklotze.vercel.app/_astro/background.BdQE_IJL_1xpFYk.webp", color: '#75c9f4'}
 bloglist:
-  - "axi-theme-basics"
-  - "deploy-vercel"
-  - "waline"
-  - "friend-circle"
-  - "writing-markdown-mdx"
-  - "mdx-components"
+  - "Reflections/Freshman-Summer-AI-Learning-Plan/Freshman-Summer-AI-Learning-Plan"
+  - "Reflections/Freshman-Summer-AI-Learning-Summary/Freshman-Summer-AI-Learning-Summary"
 ---
