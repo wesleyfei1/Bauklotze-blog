@@ -18,7 +18,7 @@ const categoryMap: Record<string, string> = {
 }
 
 // Define custom order (Research first)
-const categoryOrder = ['research', 'tech', 'daily', 'journal']
+const categoryOrder = ['journal', 'daily','research', 'tech']
 
 // Map categories with custom order (show all categories even if empty)
 const categories = categoryOrder
@@ -58,7 +58,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
       <div class='flex flex-col items-center justify-center md:flex-row'>
         {
           (config.header?.menu || []).map((item: any) => {
-            const isBlogMenu = item.link === '/blog/tech' || item.title === 'Blog'
+            const isBlogMenu = item.link === '/blog/journal' || item.title === 'Blog'
             if (isBlogMenu && categories.length > 0) {
               return (
                 <div class='menu-item-with-dropdown relative w-full md:w-fit' style='position: relative;'>
