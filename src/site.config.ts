@@ -138,9 +138,9 @@ export const integ: IntegrationUserConfig = {
   },
   // Comment system
   waline: {
-    enable: false,
+    enable: true,
     // Server service link
-    server: 'https://waline.example.com/',
+    server: 'https://bauklotze-comment.vercel.app/',
     // Refer https://waline.js.org/en/guide/features/emoji.html
     emoji: ['bmoji', 'weibo'],
     // Refer https://waline.js.org/en/reference/client/props.html

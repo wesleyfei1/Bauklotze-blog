@@ -9,7 +9,7 @@ tags:
   - ml
 language: zh
 heroImage:
-  src: 'images/background.jpg'
+  src: './images/background.jpg'
   color: '#D58388'
 ---
 
@@ -17,7 +17,9 @@ heroImage:
 
 
 
-CS229的前4个lecture讲解了GLM模型，而problem set 1是实现了GLM中的常见的模型：GDA模型，Newton方法，数据集不完整的标签的情况，泊松分布作为GLM模型中的exponential function的离散情况的预测，exponential family的凸性，自权重线性回归模型。若干个题目恰好对应了Lecture中的重要的知识点。下面是我做这些题目的心得体会。
+CS229的前4个lecture讲解了GLM模型，而problem set 1是实现了GLM中的常见的模型：GDA模型，Newton方法，数据集不完整的标签的情况，泊松分布作为GLM模型中的exponential function的离散情况的预测,exponential family的凸性，自权重线性回归模型。若干个题目恰好对应了Lecture中的重要的知识点。下面是我做这些题目的心得体会。
+
+## Problem Set 1 解析
 
 ### Problem 1
 

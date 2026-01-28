@@ -8,7 +8,7 @@ tags:
   - reflection
 language: zh
 heroImage:
-  src: 'images/background.jpg'
+  src: './images/background.jpg'
   color: '#D58388'
 ---
 
@@ -18,6 +18,7 @@ heroImage:
 
 这个暑假2个月基本上都呆在了学校里面，每天可以说是摆摆学学，学习计划中的内容基本完成了，但是也有一些做的不好的地方
 
+## 学习总结
 
 ### AI课程完成情况：
 

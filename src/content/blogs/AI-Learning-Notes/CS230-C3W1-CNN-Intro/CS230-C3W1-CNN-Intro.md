@@ -10,7 +10,7 @@ tags:
   - cv
 language: zh
 heroImage:
-  src: 'images/background.jpg'
+  src: './images/background.jpg'
   color: '#D58388'
 ---
 

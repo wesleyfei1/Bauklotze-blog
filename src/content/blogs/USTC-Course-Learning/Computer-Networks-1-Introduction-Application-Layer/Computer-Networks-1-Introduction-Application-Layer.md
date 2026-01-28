@@ -8,15 +8,13 @@ tags:
   - computer network
 language: zh
 heroImage:
-  src: 'images/background.jpg'
+  src: './images/background.jpg'
   color: '#D58388'
 ---
 
 ![Background](images/background.jpg)
 
 
-
-## 计算机网络(1): 计算机网络简介&应用层介绍(chap1,2)
 
 之前在实验室打螺丝的时候，就有在服务器上进行一堆的操作，而这个过程中，有好多常见的概念, 这些都是计算机网络这么课程所介绍的。而我们USTC的计算机网络个人感觉课程设置还是挺不错的(毕竟在csdiy中都有推荐)，教材使用的是大名鼎鼎的《**计算机网络：自顶向下方法** 》，课程内容也基本是围绕这本书展开的。
 

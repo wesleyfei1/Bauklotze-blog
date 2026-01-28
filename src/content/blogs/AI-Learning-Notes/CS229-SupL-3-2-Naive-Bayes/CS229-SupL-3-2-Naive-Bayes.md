@@ -9,7 +9,7 @@ tags:
   - ml
 language: zh
 heroImage:
-  src: 'images/background.jpg'
+  src: './images/background.jpg'
   color: '#D58388'
 ---
 
@@ -19,6 +19,7 @@ heroImage:
 
 在昨天的文章中(今天早上）中，我们使用GLA方法，并使用了Gaussian假设，做了一个GDA分类器。由于GDA中的x都是连续的，接下来我们要来介绍离散情况下的一个分类系统。
 
+## Naive Bayes 分类器
 
 ### 模型建立
 

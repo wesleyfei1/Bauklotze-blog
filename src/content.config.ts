@@ -43,11 +43,11 @@ const blog = defineCollection({
   schema: blogSchema
 })
 
-// const blogEn = defineCollection({
-//   // Load English version: index-en.md or index-en.mdx
-//   loader: glob({ base: './src/content/blogs', pattern: '**/index-en.{md,mdx}' }),
-//   schema: blogSchema
-// })
+const blogEn = defineCollection({
+  // Load English version: index-en.md or index-en.mdx
+  loader: glob({ base: './src/content/blogs', pattern: '**/index-en.{md,mdx}' }),
+  schema: blogSchema
+})
 
 const collectionSchema = ({ image }: { image: () => any }) =>
   z.object({
@@ -74,4 +74,4 @@ const postCollections = defineCollection({
   schema: collectionSchema
 })
 
-export const collections = { blog, postCollections }
+export const collections = { blog, blogEn, postCollections }
