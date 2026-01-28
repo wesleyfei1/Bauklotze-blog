@@ -10,7 +10,7 @@ tags:
 language: zh
 heroImage:
   src: 'images/background.jpg'
-  color: '#D58388'
+  color: '#ca6980'
 ---
 
 ![Background](images/background.jpg)
@@ -26,7 +26,7 @@ heroImage:
 
 3.the mathematic process
 
-4. how to prevent overfitting
+1. how to prevent overfitting
 
 5.SMO method to train it.(how to choose the parameters, how to adjust the params)
 

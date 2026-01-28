@@ -103,8 +103,8 @@ export const integ: IntegrationUserConfig = {
     applyTip: [
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: theme.description || 'Null' },
-      { name: 'Link', val: `https://${theme.personal?.domains?.main || 'example.com'}` },
-      { name: 'Avatar', val: `https://${theme.personal?.domains?.main || 'example.com'}/avatar/avatar.png` }
+      { name: 'Link', val: `https://${theme.personal?.domains?.main || 'https://bauklotze.vercel.app'}` },
+      { name: 'Avatar', val: `https://${theme.personal?.domains?.main || 'https://bauklotze.vercel.app'}/avatar/avatar.png` }
     ]
   },
   // Enable page search function

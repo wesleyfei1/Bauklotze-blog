@@ -10,7 +10,7 @@ tags:
 language: zh
 heroImage:
   src: 'images/background.jpg'
-  color: '#D58388'
+  color: '#eacd8e'
 ---
 
 ![Background](images/background.jpg)
