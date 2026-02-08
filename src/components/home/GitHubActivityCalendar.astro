@@ -31,7 +31,12 @@ interface Props {
 
 async function fetchData(username: string): Promise<GitHubActivityApiResponse> {
   const apiUrl = 'https://github-contributions-api.jogruber.de/v4/'
-  const response = await fetch(`${apiUrl}${username}?y=last`)
+  const response = await fetch(`${apiUrl}${username}?y=last`, {
+    cache: 'no-store',
+    headers: {
+      'cache-control': 'no-store'
+    }
+  })
   const data = (await response.json()) as GitHubActivityApiResponse
   if (!response.ok) {
     const message = (data as any).error || 'Unknown error'
