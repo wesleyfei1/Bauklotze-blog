@@ -1,9 +1,10 @@
 import { readdir, readFile, writeFile } from 'fs/promises'
-import { join, dirname } from 'path'
+import { join, dirname, isAbsolute, resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { Vibrant } from 'node-vibrant/node'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
+const PROJECT_ROOT = join(__dirname, '..')
 const BLOGS_DIR = join(__dirname, '../src/content/blogs')
 
 // 递归获取所有 markdown 文件
@@ -86,9 +87,13 @@ async function processMarkdownFile(filePath) {
     return
   }
   
-  // 构建完整图片路径
+  // 构建完整图片路径（支持相对路径和以 / 开头的内容根路径）
   const mdDir = dirname(filePath)
-  const imagePath = join(mdDir, imageSrc.replace('./', ''))
+  const imagePath = resolveImagePath(imageSrc, mdDir)
+  if (!imagePath) {
+    console.log(`⏭️  跳过 ${filePath} (无法解析图片路径)`)
+    return
+  }
   
   console.log(`🎨 处理: ${filePath.split('blogs')[1]}`)
   console.log(`   图片: ${imageSrc}`)
@@ -108,6 +113,14 @@ async function processMarkdownFile(filePath) {
   }
   
   console.log('')
+}
+
+function resolveImagePath(imageSrc, mdDir) {
+  if (isAbsolute(imageSrc)) return imageSrc
+  if (imageSrc.startsWith('/')) {
+    return join(PROJECT_ROOT, 'src', 'content', imageSrc.slice(1))
+  }
+  return resolve(mdDir, imageSrc)
 }
 
 async function main() {
