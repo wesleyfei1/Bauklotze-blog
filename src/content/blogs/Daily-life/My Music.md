@@ -8,10 +8,10 @@ tags:
   - music
 language: zh
 heroImage:
-  src: 'src\content\background\cz1.jpg'
-  color: '#7394f1'
+  src: '../../background/titan4.jpg'
+  color: '#d5c1a4'
 ---
-
+../../../background/titan4.jpg
 **动漫歌曲**
 1. 进击的巨人: op&ed,所有的bgm，甚至经典的场面(玛丽亚之墙夺回战，兵长的一些曲目)
    

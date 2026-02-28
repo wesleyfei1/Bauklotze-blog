@@ -8,7 +8,7 @@ tags:
   - basketball
 language: zh
 heroImage:
-  src: 'src\content\background\cavaliers1.jpg'
+  src: '../../../background/cavaliers1.jpg'
   color: '#d69780'
 ---
 

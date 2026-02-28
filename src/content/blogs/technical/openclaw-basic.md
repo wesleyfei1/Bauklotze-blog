@@ -8,7 +8,7 @@ tags:
   - music
 language: zh
 heroImage:
-  src: 'src\content\background\cz2.webp'
+  src: '../../background/cz2.webp'
   color: '#f4736a'
 ---
 
