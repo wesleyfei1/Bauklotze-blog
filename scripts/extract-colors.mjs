@@ -2,6 +2,7 @@ import { readdir, readFile, writeFile } from 'fs/promises'
 import { join, dirname, isAbsolute, resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { Vibrant } from 'node-vibrant/node'
+import sharp from 'sharp'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const PROJECT_ROOT = join(__dirname, '..')
@@ -48,7 +49,16 @@ function lightenColor(hex, amount = 0.4) {
 // 提取颜色
 async function extractColor(imagePath) {
   try {
-    const palette = await Vibrant.from(imagePath).getPalette()
+    let palette
+    try {
+      palette = await Vibrant.from(imagePath).getPalette()
+    } catch (error) {
+      if (!String(error?.message || '').includes('Unsupported MIME type')) {
+        throw error
+      }
+      const pngBuffer = await sharp(imagePath).png().toBuffer()
+      palette = await Vibrant.from(pngBuffer).getPalette()
+    }
     // 优先使用 Vibrant 颜色，其次是 DarkVibrant 或 Muted
     const swatch = palette.Vibrant || palette.DarkVibrant || palette.Muted
     const originalColor = swatch ? swatch.hex : '#D58388'
@@ -95,32 +105,35 @@ async function processMarkdownFile(filePath) {
     return
   }
   
-  console.log(`🎨 处理: ${filePath.split('blogs')[1]}`)
-  console.log(`   图片: ${imageSrc}`)
-  
   // 提取颜色
   const color = await extractColor(imagePath)
-  console.log(`   颜色: ${color}`)
   
   // 更新文件
   const updatedContent = updateColor(content, color)
   
   if (updatedContent !== content) {
+    console.log(`🎨 处理: ${filePath.split('blogs')[1]}`)
+    console.log(`   图片: ${imageSrc}`)
+    console.log(`   颜色: ${color}`)
     await writeFile(filePath, updatedContent, 'utf-8')
     console.log(`   ✅ 已更新`)
+    console.log('')
   } else {
-    console.log(`   ⏭️  颜色未变`)
+    return
   }
-  
-  console.log('')
 }
 
 function resolveImagePath(imageSrc, mdDir) {
-  if (isAbsolute(imageSrc)) return imageSrc
-  if (imageSrc.startsWith('/')) {
-    return join(PROJECT_ROOT, 'src', 'content', imageSrc.slice(1))
+  const normalizedSrc = imageSrc.trim().replace(/\\/g, '/')
+
+  if (isAbsolute(normalizedSrc)) return normalizedSrc
+  if (normalizedSrc.startsWith('/')) {
+    return join(PROJECT_ROOT, 'src', 'content', normalizedSrc.slice(1))
   }
-  return resolve(mdDir, imageSrc)
+  if (normalizedSrc.startsWith('src/content/')) {
+    return join(PROJECT_ROOT, normalizedSrc)
+  }
+  return resolve(mdDir, normalizedSrc)
 }
 
 async function main() {
