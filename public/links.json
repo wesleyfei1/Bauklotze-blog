@@ -10,11 +10,17 @@
           "link": "https://xinchengo.github.io/blog-zh/",
           "avatar": "https://avatars.githubusercontent.com/u/11454169?v=4"
         },
-        { 
+        {
           "name": "Mirawind's Blog",
           "intro": "Wish to be a firefly in the night...",
           "link": "https://www.mirawind.top/",
           "avatar": "https://avatars.githubusercontent.com/u/53815918?v=4"
+        },
+        {
+          "name": "Kisaragi's World",
+          "intro": "This is the only immortality you and I may share",
+          "link": "https://kisaragi-irona.top/",
+          "avatar": "https://avatars.githubusercontent.com/u/78963949?v=4"
         }
       ]
     }
